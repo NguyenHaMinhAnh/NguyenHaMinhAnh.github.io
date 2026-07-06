@@ -1,110 +1,338 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Nguyễn Hà Minh Anh - Portfolio</title>
+
   <style>
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
+      font-family: Arial, sans-serif;
       background: #f4f7fb;
       color: #1f2937;
+      line-height: 1.6;
     }
+
     header {
-      background: #1e5f8c;
+      background: linear-gradient(135deg, #1e5f8c, #2f80b7);
       color: white;
-      padding: 50px 15%;
+      padding: 60px 12%;
     }
-    section {
-      padding: 35px 15%;
+
+    header h1 {
+      font-size: 42px;
+      margin: 0 0 10px;
     }
-    .card {
+
+    header p {
+      font-size: 18px;
+      margin: 6px 0;
+    }
+
+    nav {
       background: white;
-      padding: 25px;
-      margin-bottom: 20px;
-      border-radius: 14px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      padding: 14px 12%;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      position: sticky;
+      top: 0;
+      z-index: 10;
     }
-    h1, h2 {
+
+    nav a {
+      margin-right: 22px;
+      color: #1e5f8c;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      padding: 40px 12%;
+    }
+
+    h2 {
+      color: #1e5f8c;
+      font-size: 28px;
+      margin-bottom: 18px;
+    }
+
+    h3 {
+      color: #111827;
       margin-top: 0;
     }
-    a {
-      color: #1e5f8c;
-      font-weight: bold;
-      text-decoration: none;
+
+    .card {
+      background: white;
+      padding: 28px;
+      margin-bottom: 24px;
+      border-radius: 16px;
+      box-shadow: 0 5px 18px rgba(0,0,0,0.08);
     }
+
+    .project-card {
+      border-left: 6px solid #1e5f8c;
+    }
+
     .tag {
       display: inline-block;
       background: #e0f2fe;
-      padding: 6px 10px;
-      border-radius: 20px;
-      margin: 4px;
+      color: #075985;
+      padding: 6px 12px;
+      border-radius: 999px;
+      margin: 5px 5px 5px 0;
       font-size: 14px;
+      font-weight: bold;
+    }
+
+    .button-group {
+      margin-top: 18px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #1e5f8c;
+      color: white;
+      padding: 10px 16px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 6px 8px 6px 0;
+    }
+
+    .btn.secondary {
+      background: #374151;
+    }
+
+    .btn:hover {
+      opacity: 0.9;
+    }
+
+    ul {
+      padding-left: 22px;
+    }
+
+    footer {
+      background: #111827;
+      color: white;
+      padding: 30px 12%;
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    footer a {
+      color: #93c5fd;
+      text-decoration: none;
+    }
+
+    @media (max-width: 768px) {
+      header, nav, section, footer {
+        padding-left: 6%;
+        padding-right: 6%;
+      }
+
+      header h1 {
+        font-size: 32px;
+      }
+
+      nav a {
+        display: inline-block;
+        margin-bottom: 8px;
+      }
     }
   </style>
 </head>
+
 <body>
 
-<header>
-  <h1>Nguyễn Hà Minh Anh</h1>
-  <p>Business Analyst Intern | System Analyst Intern | Software Developer Intern</p>
-  <p>Email: at.nguyenhaminhanhh@gmail.com | TP. Hồ Chí Minh</p>
-</header>
+  <header>
+    <h1>Nguyễn Hà Minh Anh</h1>
+    <p><strong>Business Analyst Intern | System Analyst Intern | Software Developer Intern | UI/UX Intern</strong></p>
+    <p>Sinh viên ngành Hệ thống Thông tin Quản lý - Đại học Tài chính – Marketing</p>
+    <p>📍 TP. Hồ Chí Minh | 📧 at.nguyenhaminhanhh@gmail.com</p>
+  </header>
 
-<section>
-  <div class="card">
-    <h2>Giới thiệu</h2>
-    <p>
-      Mình là sinh viên ngành Hệ thống Thông tin Quản lý, có định hướng phát triển trong lĩnh vực phân tích nghiệp vụ,
-      phân tích hệ thống và phát triển phần mềm quản lý. Mình có kinh nghiệm thực hiện dự án với Python Flask,
-      Microsoft SQL Server, UML, ERD, DFD và Use Case.
-    </p>
-  </div>
+  <nav>
+    <a href="#about">Giới thiệu</a>
+    <a href="#skills">Kỹ năng</a>
+    <a href="#projects">Dự án</a>
+    <a href="#contact">Liên hệ</a>
+  </nav>
 
-  <div class="card">
-    <h2>Kỹ năng</h2>
-    <span class="tag">Python Flask</span>
-    <span class="tag">SQL Server</span>
-    <span class="tag">HTML/CSS</span>
-    <span class="tag">JavaScript</span>
-    <span class="tag">Bootstrap</span>
-    <span class="tag">UML</span>
-    <span class="tag">ERD</span>
-    <span class="tag">DFD</span>
-    <span class="tag">Use Case</span>
-    <span class="tag">System Analysis</span>
-  </div>
+  <section id="about">
+    <div class="card">
+      <h2>Giới thiệu</h2>
+      <p>
+        Định hướng phát triển trong các vị trí Business Analyst Intern, System Analyst Intern,
+        Software Developer Intern và UI/UX Intern. Có nền tảng về phân tích nghiệp vụ,
+        thiết kế hệ thống, cơ sở dữ liệu, phát triển phần mềm quản lý, ERP/CRM và thiết kế
+        trải nghiệm người dùng.
+      </p>
 
-  <div class="card">
-    <h2>Dự án 1: Hệ thống thông tin quản trị vận hành và điều phối công việc</h2>
-    <p><strong>Vai trò:</strong> Phân tích hệ thống, thiết kế cơ sở dữ liệu, phát triển chức năng</p>
-    <p><strong>Công nghệ:</strong> Python Flask, Microsoft SQL Server, HTML/CSS, JavaScript, Bootstrap</p>
-    <p>
-      Hệ thống hỗ trợ quản lý công văn đi, công văn đến, phân công nhiệm vụ, cập nhật tiến độ,
-      quản lý ý kiến kiến nghị, hội nghị cuộc họp và báo cáo thống kê.
-    </p>
-    <p>
-      <a href="#">Xem mã nguồn</a> |
-      <a href="#">Xem báo cáo</a> |
-      <a href="#">Xem hình ảnh giao diện</a>
-    </p>
-  </div>
+      <p>
+        Các dự án đã thực hiện tập trung vào phân tích yêu cầu người dùng, mô hình hóa hệ thống,
+        thiết kế cơ sở dữ liệu, xây dựng ứng dụng web, thiết kế chương trình minh họa bằng C#
+        Windows Forms và thiết kế UI/UX trên Figma.
+      </p>
+    </div>
+  </section>
 
-  <div class="card">
-    <h2>Dự án 2: Hệ thống quản lý trung tâm Tin học</h2>
-    <p><strong>Vai trò:</strong> Phân tích yêu cầu, thiết kế mô hình, xây dựng module đơn giản</p>
-    <p><strong>Công nghệ:</strong> C#, SQL, UML</p>
-    <p>
-      Hệ thống hỗ trợ quản lý thông tin học viên, lớp học và hoạt động đào tạo tại trung tâm Tin học.
-    </p>
-  </div>
+  <section id="skills">
+    <div class="card">
+      <h2>Kỹ năng</h2>
 
-  <div class="card">
-    <h2>Liên hệ</h2>
-    <p>Email: at.nguyenhaminhanhh@gmail.com</p>
-    <p>GitHub: Thêm link GitHub của bạn tại đây</p>
-  </div>
-</section>
+      <h3>Phân tích nghiệp vụ & thiết kế hệ thống</h3>
+      <span class="tag">Requirement Analysis</span>
+      <span class="tag">System Analysis</span>
+      <span class="tag">UML</span>
+      <span class="tag">Use Case</span>
+      <span class="tag">ERD</span>
+      <span class="tag">DFD</span>
+      <span class="tag">BFD</span>
+      <span class="tag">Database Design</span>
+
+      <h3>Lập trình & cơ sở dữ liệu</h3>
+      <span class="tag">Python Flask</span>
+      <span class="tag">C#</span>
+      <span class="tag">C++</span>
+      <span class="tag">SQL Server</span>
+      <span class="tag">HTML/CSS</span>
+      <span class="tag">JavaScript</span>
+      <span class="tag">Bootstrap</span>
+      <span class="tag">Azure App Service</span>
+
+      <h3>UI/UX Design</h3>
+      <span class="tag">Figma</span>
+      <span class="tag">UX Research</span>
+      <span class="tag">Persona</span>
+      <span class="tag">User Journey Map</span>
+      <span class="tag">User Flow</span>
+      <span class="tag">Wireframe</span>
+      <span class="tag">Prototype</span>
+      <span class="tag">Usability Testing</span>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Dự án nổi bật</h2>
+
+    <div class="card project-card">
+      <h3>1. Hệ thống thông tin quản trị vận hành và điều phối công việc</h3>
+
+      <p>
+        <strong>Loại dự án:</strong> Thực hành nghề nghiệp<br>
+        <strong>Vai trò:</strong> Phân tích hệ thống, thiết kế cơ sở dữ liệu, phát triển chức năng<br>
+        <strong>Công nghệ:</strong> Python Flask, Microsoft SQL Server, HTML/CSS, JavaScript, Bootstrap, Azure
+      </p>
+
+      <p>
+        Hệ thống web hỗ trợ số hóa quy trình quản lý văn bản, phân công nhiệm vụ và điều phối công việc
+        tại đơn vị hành chính. Hệ thống giúp lưu trữ dữ liệu tập trung, hỗ trợ tra cứu nhanh,
+        theo dõi tiến độ xử lý và lập báo cáo thống kê.
+      </p>
+
+      <ul>
+        <li>Quản lý công văn đi, công văn đến, nhiệm vụ, ý kiến kiến nghị và hội nghị cuộc họp.</li>
+        <li>Phân quyền người dùng theo vai trò: quản trị viên, lãnh đạo, văn thư, chuyên viên.</li>
+        <li>Thiết kế cơ sở dữ liệu SQL Server và xây dựng hệ thống web bằng Python Flask.</li>
+        <li>Triển khai thử nghiệm trên Azure App Service.</li>
+      </ul>
+
+      <div class="button-group">
+        <a class="btn" href="https://github.com/NguyenHaMinhAnh/he-thong-quan-tri-van-hanh" target="_blank">
+          Xem GitHub
+        </a>
+        <a class="btn secondary" href="https://hethong-dieuhanh-binhtan-d8atb9a6d9cke3dg.southeastasia-01.azurewebsites.net/" target="_blank">
+          Xem Demo
+        </a>
+      </div>
+
+      <p><strong>Tài khoản test:</strong> tester / 123456</p>
+    </div>
+
+    <div class="card project-card">
+      <h3>2. Hệ thống Quản lý Trung tâm Tin học KEY</h3>
+
+      <p>
+        <strong>Loại dự án:</strong> Đồ án Phân tích và Thiết kế Hướng Đối Tượng<br>
+        <strong>Vai trò:</strong> Phân tích yêu cầu, thiết kế UML, thiết kế cơ sở dữ liệu, xây dựng chương trình minh họa<br>
+        <strong>Công nghệ:</strong> C#, Windows Forms, .NET Framework, SQL Server 2022, Visual Studio 2022, Enterprise Architect
+      </p>
+
+      <p>
+        Dự án phân tích, thiết kế và xây dựng chương trình minh họa cho hệ thống quản lý trung tâm tin học KEY.
+        Hệ thống hỗ trợ quản lý học viên, nhân viên, giảng viên, khóa học, lớp học, lịch học, tài chính,
+        khuyến mãi, tài khoản người dùng, sao lưu dữ liệu và báo cáo thống kê.
+      </p>
+
+      <ul>
+        <li>Thiết kế Use Case, Activity Diagram, Sequence Diagram, Class Diagram, State Diagram.</li>
+        <li>Thiết kế cơ sở dữ liệu và ràng buộc dữ liệu bằng SQL Server.</li>
+        <li>Xây dựng chương trình minh họa bằng C# Windows Forms.</li>
+        <li>Áp dụng kiến trúc 3 tầng: Presentation - Business - Data.</li>
+      </ul>
+
+      <div class="button-group">
+        <a class="btn" href="https://github.com/NguyenHaMinhAnh/he-thong-quan-ly-trung-tam-tin-hoc-key" target="_blank">
+          Xem GitHub
+        </a>
+      </div>
+    </div>
+
+    <div class="card project-card">
+      <h3>3. PawFeed - Nền tảng kết nối thực phẩm dư cho trạm cứu hộ và động vật</h3>
+
+      <p>
+        <strong>Loại dự án:</strong> UI/UX Case Study | Mobile App Design | Figma Prototype<br>
+        <strong>Vai trò:</strong> UX Research, UI Design, Wireframe, Prototype<br>
+        <strong>Công cụ:</strong> Figma, User Flow, User Journey Map, Wireframe, Style Guide, Usability Testing
+      </p>
+
+      <p>
+        PawFeed là ý tưởng ứng dụng giúp kết nối người có thức ăn thú cưng dư thừa với các trạm cứu hộ,
+        mái ấm động vật và tình nguyện viên. Thiết kế tập trung vào việc giảm lãng phí thức ăn,
+        hỗ trợ trạm cứu hộ tiếp cận nguồn thực phẩm miễn phí, minh bạch và thuận tiện hơn.
+      </p>
+
+      <ul>
+        <li>Khảo sát người dùng, phân tích pain points và insight của người cho và người nhận.</li>
+        <li>Xây dựng persona, user scenario, user journey map và user flow.</li>
+        <li>Thiết kế wireframe, style guide và giao diện high-fidelity trên Figma.</li>
+        <li>Xây dựng prototype tương tác và đề xuất cải tiến sau kiểm thử người dùng.</li>
+      </ul>
+
+      <div class="button-group">
+        <a class="btn" href="https://github.com/NguyenHaMinhAnh/pawfeed-uiux-design" target="_blank">
+          Xem GitHub
+        </a>
+        <a class="btn secondary" href="https://www.figma.com/design/2PZciGKj3Ic9ktySnB8xWk/2321003951_NguyenHaMinhAnh?node-id=0-1&t=9LaSMoHmvhKkTRZW-1" target="_blank">
+          Xem Figma Prototype
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="card">
+      <h2>Liên hệ</h2>
+      <p><strong>Email:</strong> at.nguyenhaminhanhh@gmail.com</p>
+      <p><strong>GitHub:</strong> <a href="https://github.com/NguyenHaMinhAnh" target="_blank">github.com/NguyenHaMinhAnh</a></p>
+      <p><strong>Portfolio:</strong> <a href="https://nguyenhaminhanh.github.io" target="_blank">nguyenhaminhanh.github.io</a></p>
+      <p><strong>Địa điểm:</strong> TP. Hồ Chí Minh, Việt Nam</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Nguyễn Hà Minh Anh. Portfolio cá nhân.</p>
+  </footer>
 
 </body>
 </html>
